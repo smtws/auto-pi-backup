@@ -75,10 +75,10 @@ fi
 # Perform backup
 if [ -f "$BACKUP_FILE" ]; then
     log "starting incremental backup"
-    image-backup "$BACKUP_FILE"
+    /usr/local/bin/image-backup "$BACKUP_FILE"
 else
     log "starting full backup"
-    image-backup -i "$BACKUP_FILE"
+    /usr/local/bin/image-backup -i "$BACKUP_FILE"
 fi
 
 # Get modification time after backup
